@@ -13,9 +13,9 @@ export default function Nav() {
 
   return (
     <Header>
-      <a className={"logo"} href="/">
+      <Link className={"logo"} href="/">
         어수선해
-      </a>
+      </Link>
       <nav>
         <NavList>
           {navLinks.map((nav) => (
