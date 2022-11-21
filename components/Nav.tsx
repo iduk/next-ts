@@ -1,10 +1,7 @@
 import Link from "next/link";
-import { useRouter } from "next/router";
 import styled from "@emotion/styled";
 
 export default function Nav() {
-  const router = useRouter();
-
   const navLinks = [
     { id: 1, title: "Home", pathname: "/" },
     { id: 2, title: "Page", pathname: "/Page" },
