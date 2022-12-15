@@ -1,8 +1,10 @@
-
-import Link from 'next/link'
-import styles from './page.module.css'
+"use client"; // hook 사용시 추가, 안하면 에러
+import styles from "./page.module.css";
+import { useRouter } from "next/navigation";
 
 export default function Home() {
+  const router = useRouter();
+
   return (
     <div className={styles.container}>
       <main className={styles.main}>
@@ -11,12 +13,12 @@ export default function Home() {
         </h1>
 
         <p className={styles.description}>
-          Get started by editing{' '}
+          Get started by editing{" "}
           <code className={styles.code}>app/page.tsx</code>
         </p>
 
-        <div style={{padding: 50}}>
-          <Link href='/dashboard'>Dashboard 바로가기</Link>
+        <div style={{ padding: 50 }}>
+          <button onClick={() => router.push("/dashboard")}>Dashboard</button>
         </div>
 
         <div className={styles.grid}>
@@ -44,8 +46,6 @@ export default function Home() {
           </a>
         </div>
       </main>
-
-      
     </div>
-  )
+  );
 }
